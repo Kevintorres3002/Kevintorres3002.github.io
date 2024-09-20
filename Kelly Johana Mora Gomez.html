@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores para Kelly</title>
+    <style>
+        body {
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        
+        .flower {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            margin: 40px auto; /* Aumenté el margen para dar más espacio alrededor de la flor */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+            animation: pulsate 2s infinite;
+        }
+
+        .text-above,
+        .text-below {
+            text-align: center;
+            color: #fff;
+            font-size: 25px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .text-above {
+            margin-bottom: 50px; /* Aumenté el margen para dar más espacio entre el texto superior y la flor */
+        }
+
+        .text-below {
+            margin-top: 50px; /* Aumenté el margen para dar más espacio entre la flor y el texto inferior */
+        }
+
+        @keyframes pulsate {
+            0% {
+                transform: scale(1.5);
+            }
+            50% {
+                transform: scale(1.6);
+            }
+            100% {
+                transform: scale(1.5);
+            }
+        }
+
+        .mid {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #000, #ff5e00, #000);
+            z-index: 4;
+            background-size: 5px 5px;
+            filter: drop-shadow(0 0 8px #682600);
+        }
+
+        .Petal1, .Petal2, .Petal3 {
+            position: absolute;
+            left: 0;
+            z-index: 1;
+            width: 200px;
+            height: 40px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #ff5e00, #fbd702);
+            filter: drop-shadow(0 0 5px #e05200);
+        }
+
+        .Petal1 { z-index: 3; }
+        .Petal2 { z-index: 2; }
+        .Petal3 { z-index: 1; }
+
+        .Petal1.p1 { transform: rotate(22.5deg); }
+        .Petal1.p2 { transform: rotate(67.5deg); }
+        .Petal1.p3 { transform: rotate(110.5deg); }
+        .Petal1.p4 { transform: rotate(157.5deg); }
+
+        .Petal2.p1 { }
+        .Petal2.p2 { transform: rotate(90deg); }
+        .Petal2.p3 { transform: rotate(45deg); }
+        .Petal2.p4 { transform: rotate(135deg); }
+
+        .Petal3.p1 { transform: rotate(22.5deg); }
+        .Petal3.p2 { transform: rotate(67.5deg); }
+        .Petal3.p3 { transform: rotate(110.5deg); }
+        .Petal3.p4 { transform: rotate(157.5deg); }
+
+        /* Botón de reproducción de audio */
+        .audio-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            color: #000;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="text-above">Flores amarillas para mi amorcito, Kelly Mora 🤍</div>
+    
+    <div class="flower">
+        <div class="mid"></div>
+        <div class="Petal1 p1"></div>
+        <div class="Petal1 p2"></div>
+        <div class="Petal1 p3"></div>
+        <div class="Petal1 p4"></div>
+        <div class="Petal2 p1"></div>
+        <div class="Petal2 p2"></div>
+        <div class="Petal2 p3"></div>
+        <div class="Petal2 p4"></div>
+        <div class="Petal3 p1"></div>
+        <div class="Petal3 p2"></div>
+        <div class="Petal3 p3"></div>
+        <div class="Petal3 p4"></div>
+    </div>
+    
+    <div class="text-below">Te quiero, princesa</div>
+
+    <!-- Botón para reproducir la canción -->
+    <audio id="audio" src="C:\Users\KEVIN\Desktop\Audio de WhatsApp 2024-09-20 a las 17.50.15_546f3262.waptt.opus"></audio>
+    <button class="audio-button" onclick="document.getElementById('audio').play()">Presiona aquí, mi vida</button>
+
+</body>
+</html>
+
+
